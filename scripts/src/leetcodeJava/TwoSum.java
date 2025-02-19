@@ -4,8 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TwoSum {
-	public List<Integer> twoSum(List<Integer> input, int target) {
+	public static void show() {
+		List<Integer> input = new ArrayList<>(List.of(0,1,2,3));
+		int target = 5;
+		
 		List<Integer> result = new ArrayList<>();
+		
 		for(Integer index1=0; index1 < input.size(); index1++) {
 			for(Integer index2=index1; index2 < input.size(); index2++) {
 				Integer value = input.get(index1) + input.get(index2);
@@ -15,6 +19,8 @@ public class TwoSum {
 				}
 			}
 		}
-		return result;
+		
+		System.out.println(result.toString());
 	}
+	
 }
